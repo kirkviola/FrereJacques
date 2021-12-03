@@ -9,7 +9,8 @@ namespace FrereJacques
     {
         static void Main(string[] args)
         {
-            ShowVoices();
+            RoboReader();
+            ShaveAndHaircut();
         }
 
         private static void PlayFrereJacques()
@@ -127,16 +128,29 @@ namespace FrereJacques
         private static void RoboReader()
         {
             SpeechSynthesizer robot = new SpeechSynthesizer();
+            robot.SelectVoiceByHints(VoiceGender.Male);
             Console.WriteLine("What would you like me to say?");
             robot.Speak(Console.ReadLine());
+            //RoboReader();
         }
 
-        private static void ShowVoices()
+        private static void GetHacked()
         {
             SpeechSynthesizer robot = new SpeechSynthesizer();
-            var voices = robot.GetInstalledVoices();
-       
-            
+            robot.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Teen);
+            robot.Speak("Get hacked noob.");
+        }
+
+        private static void ShaveAndHaircut()
+        {
+            Console.Beep(587, 500);
+            Console.Beep(440, 250);
+            Console.Beep(440, 250);
+            Console.Beep(494, 500);
+            Console.Beep(440, 500);
+            Thread.Sleep(500);
+            Console.Beep(554, 500);
+            Console.Beep(587, 500);
         }
     }
 }
