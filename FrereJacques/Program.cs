@@ -10,7 +10,9 @@ namespace FrereJacques
         static void Main(string[] args)
         {
             RoboReader();
-            ShaveAndHaircut();
+            Celebrate();
+
+           
         }
 
         private static void PlayFrereJacques()
@@ -151,6 +153,24 @@ namespace FrereJacques
             Thread.Sleep(500);
             Console.Beep(554, 500);
             Console.Beep(587, 500);
+        }
+
+        private static void WompWomp()
+        {
+            Console.Beep(392, 500);
+            Console.Beep(370, 500);
+            Console.Beep(349, 1000);
+        }
+
+        private static void Celebrate()
+        {
+            Console.Beep(392, 1500);
+            Console.Beep(370, 500);
+            Console.Beep(392, 500);
+            Console.Beep(370, 500);
+            Console.Beep(330, 500);
+            Console.Beep(440, 250);
+            Console.Beep(440, 250);
         }
     }
 }
